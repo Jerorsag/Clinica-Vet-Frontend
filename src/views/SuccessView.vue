@@ -74,13 +74,13 @@
         
         <!-- Botón principal -->
         <button 
-          @click="goToLogin" 
+          @click="goToDashboard" 
           class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 transition-colors duration-150 ease-in-out shadow-md"
         >
           <span class="absolute left-0 inset-y-0 flex items-center pl-3">
-            <MoveLeft  class="h-5 w-5 text-emerald-500 group-hover:text-emerald-400" />
+            <MoveRight  class="h-5 w-5 text-emerald-500 group-hover:text-emerald-400" />
           </span>
-          Volver al Inicio
+          Continuar
         </button>
         
         <!-- Footer con logo de pata -->
@@ -98,7 +98,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
-import { CircleCheck, Info, Clock, ShieldCheck, ArrowDownUp, MoveLeft, PawPrint } from 'lucide-vue-next'
+import { CircleCheck, Info, Clock, ShieldCheck, ArrowDownUp, MoveRight, PawPrint } from 'lucide-vue-next'
 
 const router = useRouter()
 const route = useRoute()
@@ -107,7 +107,7 @@ const message = computed(() => {
   return route.query.message as string || 'La operación se completó con éxito.'
 })
 
-const goToLogin = () => {
-  router.push('/login')
+const goToDashboard = () => {
+  router.push('/dashboard')
 }
 </script>
