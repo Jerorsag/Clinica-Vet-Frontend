@@ -30,7 +30,7 @@
     <!-- Acciones rápidas -->
     <div class="px-4 sm:px-0">
       <h2 class="text-lg font-medium text-gray-900 mb-4">Acciones rápidas</h2>
-      <quick-actions @schedule="openScheduleModal" />
+      <quick-actions @schedule="openBookingModal" />
     </div>
 
     <!-- Mascotas registradas -->
@@ -62,15 +62,33 @@
     </div>
 
     <!-- Modales (implementar después) -->
+     <!-- Agregar antes de cerrar </main-layout>: -->
+    <appointment-booking-modal 
+      v-if="showBookingModal"
+      @close="showBookingModal = false"
+      @success="handleBookingSuccess"
+      @show-confirmation="handleShowConfirmation"
+    />
+
+    <appointment-confirmation-modal
+      v-if="showConfirmationModal"
+      :appointment-summary="appointmentSummary"
+      @close="showConfirmationModal = false"
+      @back="handleConfirmationBack"
+      @success="handleBookingSuccess"
+    />
   </main-layout>
 </template>
 
 <script setup lang="ts">
 import { ref, onMounted, inject } from 'vue'
 import { Calendar, ChevronRight, PawPrint } from 'lucide-vue-next'
+import { useRouter } from 'vue-router'
 import MainLayout from '../layouts/MainLayout.vue'
 import AppointmentCard from "../components/dashboard/AppointmentCard.vue"
 import QuickActions from "../components/dashboard/QuickActions.vue"
+import AppointmentBookingModal from '../components/appointments/AppointmentBookingModal.vue'
+import AppointmentConfirmationModal from '../components/appointments/AppointmentConfirmationModal.vue'
 import type { Paciente } from '@/types'
 
 // Estado
@@ -82,6 +100,10 @@ const user = ref({
 const pets = ref<Paciente[]>([])
 const hasActiveAppointment = ref(false)
 const activeAppointment = ref(null)
+const showBookingModal = ref(false)
+const showConfirmationModal = ref(false)
+const appointmentSummary = ref(null)
+const router = useRouter()
 
 // Función de notificación proporcionada por el layout
 const showNotification = inject('showNotification')
@@ -119,9 +141,28 @@ const getBreedName = (breedId: number | null) => {
 }
 
 // Métodos de gestión de citas (stubs)
-const openScheduleModal = () => {
-  console.log('Abrir modal para agendar cita')
-  showNotification && showNotification('Funcionalidad en desarrollo: Agendar cita')
+const openBookingModal = () => {
+  showBookingModal.value = true
+}
+
+const handleShowConfirmation = (summary) => {
+  appointmentSummary.value = summary
+  showBookingModal.value = false
+  showConfirmationModal.value = true
+}
+
+const handleConfirmationBack = () => {
+  showConfirmationModal.value = false
+  showBookingModal.value = true
+}
+
+const handleBookingSuccess = (appointmentData) => {
+  showConfirmationModal.value = false
+  showBookingModal.value = false
+  showNotification && showNotification('Cita agendada exitosamente');
+
+  // Navegar a la vista de éxito
+  router.push('/appointment-success')
 }
 
 const openRescheduleModal = () => {

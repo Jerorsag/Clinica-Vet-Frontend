@@ -50,6 +50,12 @@ const routes: RouteRecordRaw[] = [
     name: 'profile',
     component: () => import('../views/ProfileView.vue'),
     meta: { requiresAuth: true }
+  },
+  // Appointment Success View
+  {
+    path: '/appointment-success',
+    name: 'AppointmentSuccess',
+    component: () => import('../views/AppointmentSuccessView.vue')
   }
 ]
 
