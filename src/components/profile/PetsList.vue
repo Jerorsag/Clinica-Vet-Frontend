@@ -10,8 +10,8 @@
           <div class="flex items-center justify-between">
             <div class="flex items-center">
               <div class="flex-shrink-0">
-                <div class="bg-emerald-100 p-3 rounded-full">
-                  <component :is="getPetIcon(pet.id_especie)" class="h-6 w-6 text-emerald-600" />
+                <div class="bg-blue-100 p-3 rounded-full">
+                  <component :is="getPetIcon(pet.id_especie)" class="h-6 w-6 text-blue-600" />
                 </div>
               </div>
               <div class="ml-4">
@@ -30,7 +30,7 @@
             <div class="flex space-x-2">
               <button 
                 @click="$emit('edit', pet)"
-                class="inline-flex items-center p-2 border border-gray-300 rounded-md text-sm font-medium text-gray-500 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500"
+                class="inline-flex items-center p-2 border border-gray-300 rounded-md text-sm font-medium text-gray-500 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
               >
                 <Edit class="h-4 w-4" />
                 <span class="sr-only">Editar</span>

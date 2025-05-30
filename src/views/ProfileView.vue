@@ -13,7 +13,7 @@
         <nav class="-mb-px flex space-x-8">
           <button @click="activeTab = 'pets'" :class="[
             activeTab === 'pets'
-              ? 'border-emerald-500 text-emerald-600'
+              ? 'border-blue-500 text-blue-600'
               : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300',
             'whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm'
           ]">
@@ -22,7 +22,7 @@
           </button>
           <button @click="activeTab = 'personal'" :class="[
             activeTab === 'personal'
-              ? 'border-emerald-500 text-emerald-600'
+              ? 'border-blue-500 text-blue-600'
               : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300',
             'whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm'
           ]">
@@ -31,7 +31,7 @@
           </button>
           <button @click="activeTab = 'security'" :class="[
             activeTab === 'security'
-              ? 'border-emerald-500 text-emerald-600'
+              ? 'border-blue-500 text-blue-600'
               : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300',
             'whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm'
           ]">
@@ -49,7 +49,7 @@
         <div class="flex justify-between items-center mb-4">
           <h2 class="text-lg font-medium text-gray-900">Mascotas Registradas</h2>
           <button @click="showPetForm = true; editingPet = null"
-            class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500">
+            class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
             <Plus class="h-4 w-4 mr-1" />
             Nueva Mascota
           </button>
@@ -127,7 +127,7 @@
               {{ isSaving ? 'Eliminando...' : 'Eliminar' }}
             </button>
             <button @click="showDeleteModal = false" type="button"
-              class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">
+              class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">
               Cancelar
             </button>
           </div>

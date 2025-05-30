@@ -8,26 +8,22 @@
           <div class="flex">
             <div class="flex-shrink-0 flex items-center">
               <!-- Logo -->
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M18 2a3 3 0 0 0-3 3v1H9V5a3 3 0 1 0-6 0v9a3 3 0 0 0 6 0v-1h6v1a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"></path>
-                <circle cx="6" cy="14" r="1"></circle>
-                <circle cx="18" cy="14" r="1"></circle>
-              </svg>
-              <span class="ml-2 text-xl font-bold text-emerald-700">VetClinic</span>
+              <img src="../assets/vet-icon.jpg" alt="Veterinary Icon" class="w-12 h-12 object-contain hidden md:block" />
+              <span class="ml-2 text-xl font-bold text-blue-900">VetHumboldt</span>
             </div>
             <!-- Menú principal -->
             <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
               <router-link 
                 to="/dashboard" 
                 class="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-                :class="[$route.path === '/dashboard' ? 'border-emerald-500 text-gray-900' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700']"
+                :class="[$route.path === '/dashboard' ? 'border-blue-500 text-gray-900' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700']"
               >
                 Dashboard
               </router-link>
               <router-link 
                 to="/profile" 
                 class="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-                :class="[$route.path === '/profile' ? 'border-emerald-500 text-gray-900' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700']"
+                :class="[$route.path === '/profile' ? 'border-blue-500 text-gray-900' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700']"
               >
                 Mi Perfil
               </router-link>
@@ -41,7 +37,7 @@
           <div class="sm:hidden flex items-center">
             <button 
               @click="mobileMenuOpen = !mobileMenuOpen"
-              class="p-2 rounded-md text-gray-500 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-500"
+              class="p-2 rounded-md text-gray-500 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
             >
               <span class="sr-only">Abrir menú principal</span>
               <Menu v-if="!mobileMenuOpen" class="h-6 w-6" />
@@ -51,14 +47,14 @@
           
           <!-- Perfil y notificaciones -->
           <div class="hidden sm:flex items-center">
-            <button class="p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500">
+            <button class="p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
               <Bell class="h-6 w-6" />
             </button>
             <div class="ml-3 relative">
               <div>
-                <button @click="isProfileMenuOpen = !isProfileMenuOpen" type="button" class="bg-white rounded-full flex focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                <button @click="isProfileMenuOpen = !isProfileMenuOpen" type="button" class="bg-white rounded-full flex focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
                   <span class="sr-only">Abrir menú de usuario</span>
-                  <UserCircle class="h-8 w-8 text-emerald-600" />
+                  <UserCircle class="h-8 w-8 text-blue-600" />
                 </button>
               </div>
               <!-- Menú dropdown de perfil -->
@@ -78,7 +74,7 @@
         <router-link 
           to="/dashboard" 
           class="block pl-3 pr-4 py-2 text-base font-medium"
-          :class="[$route.path === '/dashboard' ? 'bg-emerald-50 border-l-4 border-emerald-500 text-emerald-700' : 'border-l-4 border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800']"
+          :class="[$route.path === '/dashboard' ? 'bg-blue-50 border-l-4 border-blue-500 text-blue-700' : 'border-l-4 border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800']"
           @click="mobileMenuOpen = false"
         >
           Dashboard
@@ -86,7 +82,7 @@
         <router-link 
           to="/profile" 
           class="block pl-3 pr-4 py-2 text-base font-medium"
-          :class="[$route.path === '/profile' ? 'bg-emerald-50 border-l-4 border-emerald-500 text-emerald-700' : 'border-l-4 border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800']"
+          :class="[$route.path === '/profile' ? 'bg-blue-50 border-l-4 border-blue-500 text-blue-700' : 'border-l-4 border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800']"
           @click="mobileMenuOpen = false"
         >
           Mi Perfil
@@ -98,13 +94,13 @@
       <div class="pt-4 pb-3 border-t border-gray-200">
         <div class="flex items-center px-4">
           <div class="flex-shrink-0">
-            <UserCircle class="h-10 w-10 text-emerald-600" />
+            <UserCircle class="h-10 w-10 text-blue-600" />
           </div>
           <div class="ml-3">
             <div class="text-base font-medium text-gray-800">{{ user.nombre || 'Usuario' }}</div>
             <div class="text-sm font-medium text-gray-500">{{ user.email || 'usuario@ejemplo.com' }}</div>
           </div>
-          <button class="ml-auto p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500">
+          <button class="ml-auto p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
             <Bell class="h-6 w-6" />
           </button>
         </div>
@@ -128,26 +124,22 @@
           <!-- Logo y descripción -->
           <div>
             <div class="flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M18 2a3 3 0 0 0-3 3v1H9V5a3 3 0 1 0-6 0v9a3 3 0 0 0 6 0v-1h6v1a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"></path>
-                <circle cx="6" cy="14" r="1"></circle>
-                <circle cx="18" cy="14" r="1"></circle>
-              </svg>
-              <span class="ml-2 text-xl font-bold text-emerald-700">VetClinic</span>
+              <img src="../assets/vet-icon.jpg" alt="Veterinary Icon" class="w-12 h-12 object-contain hidden md:block" />
+              <span class="ml-2 text-xl font-bold text-blue-900">VetHumboldt</span>
             </div>
             <p class="mt-3 text-sm text-gray-500">
               Cuidando la salud y el bienestar de tus mascotas con los mejores profesionales y servicios veterinarios.
             </p>
             <div class="mt-4 flex space-x-4">
-              <a href="#" class="text-gray-400 hover:text-emerald-500">
+              <a href="#" class="text-gray-400 hover:text-blue-500">
                 <span class="sr-only">Facebook</span>
                 <Facebook class="h-6 w-6" />
               </a>
-              <a href="#" class="text-gray-400 hover:text-emerald-500">
+              <a href="#" class="text-gray-400 hover:text-blue-500">
                 <span class="sr-only">Instagram</span>
                 <Instagram class="h-6 w-6" />
               </a>
-              <a href="#" class="text-gray-400 hover:text-emerald-500">
+              <a href="#" class="text-gray-400 hover:text-blue-500">
                 <span class="sr-only">Twitter</span>
                 <Twitter class="h-6 w-6" />
               </a>
@@ -161,27 +153,27 @@
             </h3>
             <ul class="mt-4 space-y-2">
               <li>
-                <router-link to="/servicios" class="text-base text-gray-500 hover:text-emerald-700">
+                <router-link to="/servicios" class="text-base text-gray-500 hover:text-blue-700">
                   Servicios
                 </router-link>
               </li>
               <li>
-                <router-link to="/especialidades" class="text-base text-gray-500 hover:text-emerald-700">
+                <router-link to="/especialidades" class="text-base text-gray-500 hover:text-blue-700">
                   Especialidades
                 </router-link>
               </li>
               <li>
-                <router-link to="/veterinarios" class="text-base text-gray-500 hover:text-emerald-700">
+                <router-link to="/veterinarios" class="text-base text-gray-500 hover:text-blue-700">
                   Nuestros Veterinarios
                 </router-link>
               </li>
               <li>
-                <router-link to="/precios" class="text-base text-gray-500 hover:text-emerald-700">
+                <router-link to="/precios" class="text-base text-gray-500 hover:text-blue-700">
                   Precios
                 </router-link>
               </li>
               <li>
-                <router-link to="/blog" class="text-base text-gray-500 hover:text-emerald-700">
+                <router-link to="/blog" class="text-base text-gray-500 hover:text-blue-700">
                   Blog
                 </router-link>
               </li>
@@ -195,20 +187,20 @@
             </h3>
             <div class="mt-4 space-y-3">
               <p class="flex items-center text-base text-gray-500">
-                <MapPin class="h-5 w-5 mr-2 text-emerald-500" />
-                Av. Principal #123, Armenia, Quindio
+                <MapPin class="h-5 w-5 mr-2 text-blue-500" />
+                Calle 6 Norte #14-26
               </p>
               <p class="flex items-center text-base text-gray-500">
-                <Phone class="h-5 w-5 mr-2 text-emerald-500" />
-                (604) 555-1234
+                <Phone class="h-5 w-5 mr-2 text-blue-500" />
+                +57 311 2324283
               </p>
               <p class="flex items-center text-base text-gray-500">
-                <Mail class="h-5 w-5 mr-2 text-emerald-500" />
+                <Mail class="h-5 w-5 mr-2 text-blue-500" />
                 vetclinic@gmail.com
               </p>
               <p class="flex items-center text-base text-gray-500">
-                <Clock class="h-5 w-5 mr-2 text-emerald-500" />
-                Lun-Vie: 8am-6pm | Dom: 9am-1pm
+                <Clock class="h-5 w-5 mr-2 text-blue-500" />
+                Lun-Vie: 8am-12am / 2pm-6pm | Dom: 8am-12am
               </p>
             </div>
           </div>
@@ -217,10 +209,10 @@
         <!-- Barra de derechos y política de privacidad -->
         <div class="mt-8 pt-6 border-t border-gray-200 md:flex md:items-center md:justify-between">
           <div class="flex space-x-6 md:order-2">
-            <router-link to="/terminos" class="text-sm text-gray-500 hover:text-emerald-700">
+            <router-link to="/terminos" class="text-sm text-gray-500 hover:text-blue-700">
               Términos y Condiciones
             </router-link>
-            <router-link to="/privacidad" class="text-sm text-gray-500 hover:text-emerald-700">
+            <router-link to="/privacidad" class="text-sm text-gray-500 hover:text-blue-700">
               Política de Privacidad
             </router-link>
           </div>
@@ -250,7 +242,7 @@
         <div class="ml-4 flex-shrink-0 flex">
           <button
             @click="notification.show = false"
-            class="rounded-md inline-flex text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500"
+            class="rounded-md inline-flex text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
           >
             <span class="sr-only">Cerrar</span>
             <X class="h-5 w-5" />

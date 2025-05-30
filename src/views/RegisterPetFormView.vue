@@ -1,18 +1,18 @@
 <template>
-  <div class="min-h-screen bg-gradient-to-b from-teal-50 to-emerald-100 py-12 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
+  <div class="min-h-screen bg-gradient-to-b from-teal-50 to-blue-100 py-12 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
     <div class="max-w-md w-full bg-white rounded-xl shadow-2xl overflow-hidden">
       <!-- Encabezado con imagen y título -->
-      <div class="bg-emerald-600 py-6 relative">
+      <div class="bg-blue-600 py-6 relative">
         <div class="absolute top-0 right-0 w-32 h-32 opacity-10">
           <PawPrint class="w-full h-full" fill="white"/>
         </div>
         <div class="flex justify-center mb-3">
           <div class="bg-white p-2 rounded-full shadow-md">
-            <Smile class="w-10 h-10 text-emerald-600"/>
+            <Smile class="w-10 h-10 text-blue-600"/>
           </div>
         </div>
         <h1 class="text-2xl font-bold text-center text-white">Registra a tu Mascota</h1>
-        <p class="text-center text-emerald-100 mt-1">Agreguemos información sobre tu compañero</p>
+        <p class="text-center text-blue-100 mt-1">Agreguemos información sobre tu compañero</p>
       </div>
 
       <!-- Formulario -->
@@ -39,7 +39,7 @@
                   v-model="petData.nombre"
                   type="text"
                   required
-                  class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-emerald-500 focus:border-emerald-500 text-gray-900 placeholder-gray-400"
+                  class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-gray-900 placeholder-gray-400"
                   placeholder="Firulais"
                 />
               </div>
@@ -58,7 +58,7 @@
                   id="especie"
                   v-model="petData.id_especie"
                   required
-                  class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-emerald-500 focus:border-emerald-500 text-gray-900"
+                  class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-gray-900"
                 >
                   <option value="" disabled>Seleccionar</option>
                   <option v-for="especie in especies" :key="especie.id" :value="especie.id">
@@ -81,7 +81,7 @@
                   id="raza"
                   v-model="petData.id_raza"
                   required
-                  class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-emerald-500 focus:border-emerald-500 text-gray-900"
+                  class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-gray-900"
                 >
                   <option value="" disabled>Seleccionar</option>
                   <option v-for="raza in razasFiltradas" :key="raza.id" :value="raza.id">
@@ -105,7 +105,7 @@
                   v-model="petData.fecha_nacimiento"
                   type="date"
                   required
-                  class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-emerald-500 focus:border-emerald-500 text-gray-900"
+                  class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-gray-900"
                 />
               </div>
             </div>
@@ -123,7 +123,7 @@
                   id="sexo"
                   v-model="petData.sexo"
                   required
-                  class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-emerald-500 focus:border-emerald-500 text-gray-900"
+                  class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-gray-900"
                 >
                   <option value="" disabled>Seleccionar</option>
                   <option value="M">Macho</option>
@@ -146,18 +146,18 @@
                 id="descripcion"
                 v-model="petData.descripcion"
                 rows="3"
-                class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-emerald-500 focus:border-emerald-500 text-gray-900 placeholder-gray-400"
+                class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-gray-900 placeholder-gray-400"
                 placeholder="Color, tamaño, comportamiento, etc."
               ></textarea>
             </div>
           </div>
 
           <!-- Sección de foto de mascota -->
-          <div class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center hover:border-emerald-500 transition-colors duration-200">
+          <div class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center hover:border-blue-500 transition-colors duration-200">
             <div class="space-y-2">
               <ImageUp class="mx-auto h-12 w-12 text-gray-400"/>
               <div class="flex text-sm text-gray-600 justify-center">
-                <label for="file-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-emerald-600 hover:text-emerald-500 focus-within:outline-none">
+                <label for="file-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-blue-600 hover:text-blue-500 focus-within:outline-none">
                   <span>Subir una foto</span>
                   <input id="file-upload" name="file-upload" type="file" class="sr-only" @change="handleFileChange" accept="image/*" />
                 </label>
@@ -176,18 +176,18 @@
             <button 
               type="button" 
               @click="$router.push('/register-pet-prompt')"
-              class="flex-1 py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500"
+              class="flex-1 py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
             >
               Volver
             </button>
             
             <button 
               type="submit" 
-              class="flex-1 group relative flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 transition-colors"
+              class="flex-1 group relative flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
               :disabled="isLoading"
             >
               <span v-if="!isLoading" class="absolute left-0 inset-y-0 flex items-center pl-3">
-                <Save class="h-5 w-5 text-emerald-500 group-hover:text-emerald-400" />
+                <Save class="h-5 w-5 text-blue-500 group-hover:text-blue-400" />
               </span>
               <svg v-if="isLoading" class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                 <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>

@@ -15,7 +15,7 @@
                 v-model="formData.nombre"
                 type="text"
                 required
-                class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-emerald-500 focus:border-emerald-500 text-gray-900"
+                class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-gray-900"
                 placeholder="Ej. Max"
               />
             </div>
@@ -32,7 +32,7 @@
                 id="especie"
                 v-model="formData.id_especie"
                 required
-                class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-emerald-500 focus:border-emerald-500 text-gray-900"
+                class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-gray-900"
                 @change="formData.id_raza = null"
               >
                 <option value="" disabled>Seleccionar</option>
@@ -55,7 +55,7 @@
                 v-model="formData.id_raza"
                 required
                 :disabled="!formData.id_especie"
-                class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-emerald-500 focus:border-emerald-500 text-gray-900"
+                class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-gray-900"
               >
                 <option value="" disabled>{{ formData.id_especie ? 'Seleccionar' : 'Primero selecciona una especie' }}</option>
                 <option v-for="breed in filteredBreeds" :key="breed.id" :value="breed.id">
@@ -77,7 +77,7 @@
                 v-model="formData.fecha_nacimiento"
                 type="date"
                 required
-                class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-emerald-500 focus:border-emerald-500 text-gray-900"
+                class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-gray-900"
               />
             </div>
           </div>
@@ -93,7 +93,7 @@
                 id="sexo"
                 v-model="formData.sexo"
                 required
-                class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-emerald-500 focus:border-emerald-500 text-gray-900"
+                class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-gray-900"
               >
                 <option value="" disabled>Seleccionar</option>
                 <option value="M">Macho</option>
@@ -113,7 +113,7 @@
                 id="descripcion"
                 v-model="formData.descripcion"
                 rows="3"
-                class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-emerald-500 focus:border-emerald-500 text-gray-900"
+                class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-gray-900"
                 placeholder="Color, tamaño, comportamiento, etc."
               ></textarea>
             </div>
@@ -125,14 +125,14 @@
             <button
               type="button"
               @click="$emit('cancel')"
-              class="py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500"
+              class="py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
             >
               Cancelar
             </button>
             <button
               type="submit"
               :disabled="isSaving"
-              class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500"
+              class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
             >
               <span v-if="isSaving" class="mr-2">
                 <svg class="animate-spin h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">

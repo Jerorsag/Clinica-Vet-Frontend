@@ -1,8 +1,8 @@
 <template>
-  <div class="min-h-screen bg-gradient-to-b from-teal-50 to-emerald-100 py-12 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
+  <div class="min-h-screen bg-gradient-to-b from-teal-50 to-blue-100 py-12 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
     <div class="max-w-md w-full bg-white rounded-xl shadow-2xl overflow-hidden">
       <!-- Encabezado con fondo decorativo -->
-      <div class="relative h-32 bg-emerald-600 overflow-hidden flex items-center justify-center">
+      <div class="relative h-32 bg-blue-600 overflow-hidden flex items-center justify-center">
         <!-- Patrón decorativo de fondo -->
         <div class="absolute inset-0 opacity-10">
           <div class="absolute -left-4 -top-4 w-32 h-32">
@@ -16,7 +16,7 @@
         <!-- Círculo con ícono de mascota -->
         <div class="relative z-10">
           <div class="bg-white p-4 rounded-full shadow-lg">
-            <PawPrint class="w-14 h-14 text-emerald-600" />
+            <PawPrint class="w-14 h-14 text-blue-600" />
           </div>
         </div>
       </div>
@@ -25,16 +25,16 @@
       <div class="p-8 text-center">
         <!-- Mensaje de éxito -->
         <div class="relative">
-          <h1 class="text-2xl font-bold text-emerald-700 mb-2">¡Registro Exitoso!</h1>
+          <h1 class="text-2xl font-bold text-blue-700 mb-2">¡Registro Exitoso!</h1>
           
           <!-- Confeti decorativo -->
           <span class="absolute -top-6 -left-2 text-yellow-500 text-xl">✦</span>
-          <span class="absolute -top-4 right-4 text-emerald-400 text-lg">✦</span>
+          <span class="absolute -top-4 right-4 text-blue-400 text-lg">✦</span>
           <span class="absolute top-1 -right-2 text-blue-400 text-xl">✦</span>
         </div>
         
-        <div class="bg-emerald-50 border-l-4 border-emerald-500 p-4 rounded-r-lg my-6">
-          <p class="text-emerald-800 font-medium">Tu cuenta ha sido creada correctamente.</p>
+        <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg my-6">
+          <p class="text-blue-800 font-medium">Tu cuenta ha sido creada correctamente.</p>
         </div>
         
         <div class="mb-8">
@@ -47,12 +47,12 @@
           <!-- Opción Sí -->
           <div 
             @click="handleRegisterPet"
-            class="bg-white border-2 border-emerald-200 hover:border-emerald-500 rounded-xl p-5 flex flex-col items-center cursor-pointer transition-all duration-300 hover:shadow-md"
+            class="bg-white border-2 border-blue-200 hover:border-blue-500 rounded-xl p-5 flex flex-col items-center cursor-pointer transition-all duration-300 hover:shadow-md"
           >
-            <div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mb-3">
-              <CirclePlus class="h-8 w-8 text-emerald-600"/>
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-3">
+              <CirclePlus class="h-8 w-8 text-blue-600"/>
             </div>
-            <h3 class="font-medium text-emerald-800 mb-1">Registrar ahora</h3>
+            <h3 class="font-medium text-blue-800 mb-1">Registrar ahora</h3>
             <p class="text-sm text-gray-500">Agrega tu primera mascota</p>
           </div>
           
@@ -72,14 +72,14 @@
         <!-- Footer -->
         <div class="pt-4 border-t border-gray-200">
           <div class="flex justify-center space-x-4">
-            <div class="w-8 h-8 bg-emerald-50 rounded-full flex items-center justify-center">
-              <Fingerprint class="h-5 w-5 text-emerald-500" />
+            <div class="w-8 h-8 bg-blue-50 rounded-full flex items-center justify-center">
+              <Fingerprint class="h-5 w-5 text-blue-500" />
             </div>
-            <div class="w-8 h-8 bg-emerald-50 rounded-full flex items-center justify-center">
-              <Heart class="h-5 w-5 text-emerald-500" />
+            <div class="w-8 h-8 bg-blue-50 rounded-full flex items-center justify-center">
+              <Heart class="h-5 w-5 text-blue-500" />
             </div>
-            <div class="w-8 h-8 bg-emerald-50 rounded-full flex items-center justify-center">
-              <ShieldCheck class="h-5 w-5 text-emerald-500"  />
+            <div class="w-8 h-8 bg-blue-50 rounded-full flex items-center justify-center">
+              <ShieldCheck class="h-5 w-5 text-blue-500"  />
             </div>
           </div>
           <p class="text-xs text-gray-500 mt-3">Tu compañero siempre estará en buenas manos</p>

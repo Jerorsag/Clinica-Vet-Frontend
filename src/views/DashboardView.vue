@@ -13,13 +13,13 @@
       <appointment-card :appointment="activeAppointment" @reschedule="openRescheduleModal" @cancel="openCancelModal" />
     </div>
     <div v-else class="px-4 sm:px-0 mb-8">
-      <div class="bg-emerald-50 border-l-4 border-emerald-400 p-4 rounded">
+      <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded">
         <div class="flex">
           <div class="flex-shrink-0">
-            <Calendar class="h-5 w-5 text-emerald-500" />
+            <Calendar class="h-5 w-5 text-blue-500" />
           </div>
           <div class="ml-3">
-            <p class="text-sm text-emerald-800">
+            <p class="text-sm text-blue-800">
               No tienes citas programadas. ¿Quieres agendar una?
             </p>
           </div>
@@ -37,15 +37,15 @@
     <div class="px-4 sm:px-0 mt-8">
       <div class="flex justify-between items-center mb-4">
         <h2 class="text-lg font-medium text-gray-900">Mis mascotas</h2>
-        <router-link to="/profile" class="text-sm text-emerald-600 hover:text-emerald-800 flex items-center">
+        <router-link to="/profile" class="text-sm text-blue-600 hover:text-blue-800 flex items-center">
           Ver todas
           <ChevronRight class="h-4 w-4 ml-1" />
         </router-link>
       </div>
       <div v-if="pets.length > 0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <div v-for="pet in pets.slice(0, 3)" :key="pet.id_paciente" class="bg-white rounded-lg shadow p-4 flex items-center">
-          <div class="bg-emerald-100 p-3 rounded-full">
-            <PawPrint class="h-6 w-6 text-emerald-600" />
+          <div class="bg-blue-100 p-3 rounded-full">
+            <PawPrint class="h-6 w-6 text-blue-600" />
           </div>
           <div class="ml-4">
             <h3 class="text-lg font-medium text-gray-900">{{ pet.nombre }}</h3>
@@ -55,7 +55,7 @@
       </div>
       <div v-else class="bg-white rounded-lg shadow p-4 text-center">
         <p class="text-gray-600">Aún no tienes mascotas registradas.</p>
-        <router-link to="/profile" class="mt-2 inline-block text-emerald-600 hover:text-emerald-800">
+        <router-link to="/profile" class="mt-2 inline-block text-blue-600 hover:text-blue-800">
           Registrar mascota
         </router-link>
       </div>

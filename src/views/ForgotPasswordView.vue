@@ -1,18 +1,18 @@
 <template>
-  <div class="min-h-screen bg-gradient-to-b from-teal-50 to-emerald-100 py-12 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
+  <div class="min-h-screen bg-gradient-to-b from-teal-50 to-blue-100 py-12 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
     <div class="max-w-md w-full bg-white rounded-xl shadow-2xl overflow-hidden">
       <!-- Encabezado con imagen y título -->
-      <div class="bg-emerald-600 py-6 relative">
+      <div class="bg-blue-600 py-6 relative">
         <div class="absolute top-0 right-0 w-32 h-32 opacity-10">
           <RotateCcwKey class="w-full h-full text-white"/>
         </div>
         <div class="flex justify-center mb-3">
           <div class="bg-white p-2 rounded-full shadow-md">
-            <Lock class="p-1 w-12 h-12 text-emerald-600"/>
+            <Lock class="p-1 w-12 h-12 text-blue-600"/>
           </div>
         </div>
         <h1 class="text-2xl font-bold text-center text-white">Recupera tu Contraseña</h1>
-        <p class="text-center text-emerald-100 mt-1">Te enviaremos instrucciones por correo</p>
+        <p class="text-center text-blue-100 mt-1">Te enviaremos instrucciones por correo</p>
       </div>
 
       <!-- Contenido principal -->
@@ -54,7 +54,7 @@
                   type="email"
                   required
                   autocomplete="email"
-                  class="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-emerald-500 focus:border-emerald-500 text-gray-900 placeholder-gray-400"
+                  class="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-gray-900 placeholder-gray-400"
                   placeholder="tu@email.com"
                 />
               </div>
@@ -63,11 +63,11 @@
             <div>
               <button 
                 type="submit" 
-                class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 transition-colors duration-150 ease-in-out shadow-md"
+                class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-150 ease-in-out shadow-md"
                 :disabled="isLoading"
               >
                 <span class="absolute left-0 inset-y-0 flex items-center pl-3" v-if="!isLoading">
-                  <Upload class="h-5 w-5 text-emerald-500 group-hover:text-emerald-400" />
+                  <Upload class="h-5 w-5 text-blue-500 group-hover:text-blue-400" />
                 </span>
                 <svg v-if="isLoading" class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                   <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
@@ -79,7 +79,7 @@
           </form>
 
           <div class="text-center">
-            <router-link to="/login" class="font-medium text-sm text-emerald-600 hover:text-emerald-500">
+            <router-link to="/login" class="font-medium text-sm text-blue-600 hover:text-blue-500">
               Volver al inicio de sesión
             </router-link>
           </div>
@@ -88,8 +88,8 @@
         <!-- Pantalla de éxito cuando se envía el correo -->
         <div v-if="emailSent" class="text-center space-y-6">
           <div class="flex justify-center">
-            <div class="w-20 h-20 rounded-full bg-emerald-100 flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div class="w-20 h-20 rounded-full bg-blue-100 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
             </div>
@@ -97,8 +97,8 @@
           
           <h2 class="text-xl font-bold text-gray-800">¡Listo! Revisa tu correo</h2>
           
-          <div class="bg-emerald-50 rounded-lg p-4">
-            <p class="text-emerald-800">
+          <div class="bg-blue-50 rounded-lg p-4">
+            <p class="text-blue-800">
               Hemos enviado instrucciones a <strong>{{ email }}</strong> para recuperar tu contraseña.
             </p>
           </div>
@@ -110,7 +110,7 @@
           <div class="pt-4">
             <button 
               @click="goToLogin" 
-              class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-emerald-700 bg-emerald-100 hover:bg-emerald-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500"
+              class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-blue-700 bg-blue-100 hover:bg-blue-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
             >
               Volver al inicio de sesión
             </button>
@@ -121,7 +121,7 @@
       <!-- Footer -->
       <div class="bg-gray-50 px-8 py-4 border-t border-gray-100">
         <div class="flex items-center justify-center space-x-2 text-sm text-gray-500">
-          <Lock class="h-4 w-4 text-emerald-500"/>
+          <Lock class="h-4 w-4 text-blue-500"/>
           <span>Toda la información es encriptada y segura</span>
         </div>
       </div>
