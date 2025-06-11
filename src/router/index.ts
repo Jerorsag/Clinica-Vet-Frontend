@@ -56,7 +56,12 @@ const routes: RouteRecordRaw[] = [
     path: '/appointment-success',
     name: 'AppointmentSuccess',
     component: () => import('../views/AppointmentSuccessView.vue')
-  }
+  },
+  {
+  path: '/settings',
+  name: 'settings', 
+  component: () => import('../views/SettingsView.vue')
+}
 ]
 
 const router = createRouter({
